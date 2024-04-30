@@ -1,13 +1,13 @@
 import React from "react"
 
 // website elements
-import BHeader from "./b-home/bHeader";
+import BPage from "./b-home/bPage"
 
 // the app itself
 export default function App() {
   return (
     <div>
-      <BHeader />
+      <BPage />
     </div>
   )
 }

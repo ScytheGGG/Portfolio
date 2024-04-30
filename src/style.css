@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  background-color: #F5F5F5;
+  background-color: #001233;
 }
 
 body {
@@ -21,8 +21,8 @@ body {
 /* //////////////////////////////////// */
 
 :root { 
- /* Navbar color */ 
- --gray: #1e1f22;
+ /* Possible theme colors */ 
+ --dark_blue: #001233;
  --white: #ffffff;
  --grayish: #F8F8F8
 }
@@ -37,26 +37,56 @@ body {
 
 
 /* - - - - - - - - - - -- - - - - - -- - - - - - - - - -- -  - - - - - */
-/* Navbar */
-.bHeader--nav {
-  background-color: var(--white);
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-  border-bottom: 1px solid rgba(98, 98, 98, 0.5);
-  /* - - - - - - - - - - - - - - - - - - */
-  position: relative;
-  padding: 5px;
-  display: flex;
-  justify-content: space-between;
+/* Navbar section */
+.bPage--style {
+  color: #EEF0F1;
+  margin-top: 7.5%;
 }
 
-.bHeader--div {
-  background-color: var(--white);
-  font-size: 18px;
-  color: var(--gray);
-  /* - - - - - - - - - - - - - - - - - - */
-  display: flex;
-  align-items: center;
-  margin-right: 35px;
+.bPage--left {
+  margin-left: 7.5%;
+
+  .bph--who {
+    font-size: 50px;
+    font-weight: bold;
+  }
+
+  .bph--what {
+    font-size: 20px;
+    margin-top: -3.5%;
+  }
+
+  .bph--why {
+    color: #BBC1C2;
+    max-width: 30%;
+    line-height: 1.5;
+  }
+
+  .bph--nav {
+    margin-top: 5%;
+    margin-left: 5%;
+    font-weight: bold;
+    font-size: 12.5px;
+    line-height: 2;
+  }
+
+  .bph--images {
+    display: flex;
+    padding-top: 2%;
+    padding-left: 5px;
+
+    .github--logo, .linkedin--logo {
+      width: 24px;
+      height: 24px;
+      margin-right: 15px;
+    }
+  }
+}
+
+/* - - - - - - - - - - -- - - - - - -- - - - - - - - - -- -  - - - - - */
+/* Page section */
+.bPage--right {
+
 }
 
 
