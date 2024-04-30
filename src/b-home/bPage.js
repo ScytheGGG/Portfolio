@@ -24,7 +24,7 @@ export default function BPage() {
                     <a href="https://www.linkedin.com/in/tammehoidkarl/" target="_blank" rel="noreferrer">
                         <img className="linkedin--logo" src="./photos/linkedin-logo.png" alt="LinkedIn"></img>
                     </a>
-                    <a href="mailto:tammehoidkarl@gmail.com?subject=Subject%20of%20the%20email&body=Body%20of%20the%20email" target="_blank" rel="noreferrer">
+                    <a href="mailto:tammehoidkarl@gmail.com" target="_blank" rel="noreferrer">
                         <img class="mail--logo" src="./photos/mail-logo.png" alt="Mail"></img>
                     </a>
                 </div>
