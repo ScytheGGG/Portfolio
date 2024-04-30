@@ -19,10 +19,10 @@ export default function BPage() {
                     <p>CONTACT</p>
                 </div>
                 <div className="bph--images">
-                    <a href="https://github.com/scytheggg" target="_blank">
+                    <a href="https://github.com/scytheggg" target="_blank" rel="noreferrer">
                         <img className="github--logo" src="./photos/github-logo.png" alt="Github"></img>
                     </a>
-                    <a href="https://www.linkedin.com/in/tammehoidkarl/" target="_blank">
+                    <a href="https://www.linkedin.com/in/tammehoidkarl/" target="_blank" rel="noreferrer">
                         <img className="linkedin--logo" src="./photos/linkedin-logo.png" alt="LinkedIn"></img>
                     </a>
                 </div>
