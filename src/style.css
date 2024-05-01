@@ -76,37 +76,29 @@ body {
     padding-top: 2.75%;
     padding-left: 5px;
 
-    .github--logo {
+    .github--logo, .linkedin--logo, .mail--logo {
       width: 24px;
-      height: 23px;
       margin-right: 20px;
-      transition: filter 0.3s ease; /* Transition the filter property */
+      position: relative; /* Ensure relative positioning for the logo container */
     }
     
-    .github--logo:hover {
-      filter: grayscale(0%); /* Remove grayscale filter on hover */
+    .github--logo img, .linkedin--logo img, .mail--logo img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: opacity 0.3s ease; /* Smooth transition for opacity */
     }
     
-    .github--logo img {
-      display: none; /* Hide all images by default */
+    .github--logo:hover .github--filtered,
+    .linkedin--logo:hover .linkedin--filtered,
+    .mail--logo:hover .mail--filtered {
+      opacity: 0; /* Hide the filtered image on hover */
     }
     
-    .github--logo:hover img.normal {
-      display: inline-block; /* Show the normal image on hover */
-    }
-    
-    .github--logo:not(:hover) img.filtered {
-      display: inline-block; /* Show the filtered image when not hovered */
-    }
-
-    .linkedin--logo {
-      width: 22px;
-      height: 22px;
-    }
-
-    .mail--logo {
-      width: 27px;
-      height: 22px;
+    .github--logo:not(:hover) .github--normal,
+    .linkedin--logo:not(:hover) .linkedin--normal,
+    .mail--logo:not(:hover) .mail--normal {
+      opacity: 0; /* Hide the normal image when not hovered */
     }
   }
 }
