@@ -9,9 +9,9 @@ body {
 }
 
 /* CUSTOM SCROLLBAR */
-/* ::-webkit-scrollbar {
+  ::-webkit-scrollbar {
   width: 13px;
-  background-color: var(--gray);
+  background-color: var(--white);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -47,25 +47,25 @@ body {
   margin-left: 7.5%;
 
   .bph--who {
-    font-size: 50px;
+    font-size: 52px;
     font-weight: bold;
   }
 
   .bph--what {
-    font-size: 20px;
-    margin-top: -3.5%;
+    font-size: 22px;
+    margin-top: -4%;
   }
 
   .bph--why {
     color: #BBC1C2;
     max-width: 30%;
     line-height: 1.5;
+    font-size: 17px;
   }
 
   .bph--nav {
-    margin-top: 6%;
+    margin-top: 5%;
     margin-left: 4%;
-    font-weight: bold;
     font-size: 12px;
     line-height: 2.25;
     letter-spacing: 1.5px;
@@ -73,13 +73,40 @@ body {
 
   .bph--images {
     display: flex;
-    padding-top: 3.5%;
+    padding-top: 2.75%;
     padding-left: 5px;
 
-    .github--logo, .linkedin--logo, .mail--logo {
-      width: 25px;
+    .github--logo {
+      width: 24px;
       height: 23px;
       margin-right: 20px;
+      transition: filter 0.3s ease; /* Transition the filter property */
+    }
+    
+    .github--logo:hover {
+      filter: grayscale(0%); /* Remove grayscale filter on hover */
+    }
+    
+    .github--logo img {
+      display: none; /* Hide all images by default */
+    }
+    
+    .github--logo:hover img.normal {
+      display: inline-block; /* Show the normal image on hover */
+    }
+    
+    .github--logo:not(:hover) img.filtered {
+      display: inline-block; /* Show the filtered image when not hovered */
+    }
+
+    .linkedin--logo {
+      width: 22px;
+      height: 22px;
+    }
+
+    .mail--logo {
+      width: 27px;
+      height: 22px;
     }
   }
 }

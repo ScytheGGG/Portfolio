@@ -2,12 +2,22 @@ import React from "react";
 
 export default function BPage() {
     const pageStyle = {
-            fontFamily: 'Inter, sans-serif', // Specify Inter as the primary font
+            fontFamily: 'Calibri, Inter, sans-serif', // Specify calibri as the primary font
+    };
+
+    const leftStyle = {
+        position: 'sticky',
+        flex: '0 0 300px',
+    };
+
+    const rightStyle = {
+        flex: '1', // Flex grow to fill remaining space
+        overflowY: 'auto', // Enable vertical scrolling if content overflows
     };
 
     return (
         <div className="bPage--style" style={pageStyle}>
-            <div className="bPage--left">
+            <div className="bPage--left" style={leftStyle}>
                 <p className="bph--who">Karl Tammehoid</p>
                 <p className="bph--what">Software Development Student</p>
                 <p className="bph--why">I build immersive and user-friendly experiences,
@@ -19,13 +29,22 @@ export default function BPage() {
                 </div>
                 <div className="bph--images">
                     <a href="https://github.com/scytheggg" target="_blank" rel="noreferrer">
-                        <img className="github--logo" src="./photos/github-logo.png" alt="Github"></img>
+                        <div className="github--logo">
+                            <img className="filtered github--filtered" src="./photos/github-logo-filtered.png" alt="Github Filtered" />
+                            <img className="normal github--normal" src="./photos/github-logo.png" alt="Github Normal" />
+                        </div>
                     </a>
                     <a href="https://www.linkedin.com/in/tammehoidkarl/" target="_blank" rel="noreferrer">
-                        <img className="linkedin--logo" src="./photos/linkedin-logo.png" alt="LinkedIn"></img>
+                        <div className="linkedin--logo">
+                            <img className="filtered linkedin--filtered" src="./photos/linkedin-logo-filtered.png" alt="LinkedIn Filtered" />
+                            <img className="normal linkedin--normal" src="./photos/linkedin-logo.png" alt="LinkedIn Normal" />
+                        </div>
                     </a>
                     <a href="mailto:tammehoidkarl@gmail.com" target="_blank" rel="noreferrer">
-                        <img class="mail--logo" src="./photos/mail-logo.png" alt="Mail"></img>
+                        <div className="mail--logo">
+                            <img className="filtered mail--filtered" src="./photos/mail-logo-filtered.png" alt="Mail Filtered" />
+                            <img className="normal mail--normal" src="./photos/mail-logo.png" alt="Mail Normal" />
+                        </div>
                     </a>
                 </div>
             </div>
