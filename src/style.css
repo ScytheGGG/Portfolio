@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  background-color: #001233;
+  background-color: var(--dark_blue);
 }
 
 body {
@@ -11,20 +11,20 @@ body {
 /* CUSTOM SCROLLBAR */
   ::-webkit-scrollbar {
   width: 13px;
-  background-color: var(--white);
+  background-color: var(--dark_blue);
 }
 
 ::-webkit-scrollbar-thumb {
   background: var(--white);
-} */
+}
 
 /* //////////////////////////////////// */
 
 :root { 
  /* Possible theme colors */ 
- --dark_blue: #001233;
- --white: #ffffff;
- --grayish: #F8F8F8
+ --dark_blue: #141925;
+ --white: #E2E8F0;
+ --grayish: #94A3B9;
 }
 
 /* ///////////////////////////////////////////////////////////////////////////////////////// */
@@ -39,7 +39,7 @@ body {
 /* - - - - - - - - - - -- - - - - - -- - - - - - - - - -- -  - - - - - */
 /* Navbar section */
 .bPage--style {
-  color: #EEF0F1;
+  color: var(--white);
   margin-top: 7.5%;
 }
 
@@ -53,11 +53,12 @@ body {
 
   .bph--what {
     font-size: 22px;
+    font-weight: 700;
     margin-top: -4%;
   }
 
   .bph--why {
-    color: #BBC1C2;
+    color: var(--grayish);
     max-width: 30%;
     line-height: 1.5;
     font-size: 17px;
@@ -66,7 +67,8 @@ body {
   .bph--nav {
     margin-top: 5%;
     margin-left: 4%;
-    font-size: 12px;
+    font-size: 13px;
+    font-weight: bold;
     line-height: 2.25;
     letter-spacing: 1.5px;
   }
