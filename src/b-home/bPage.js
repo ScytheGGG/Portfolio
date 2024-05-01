@@ -18,16 +18,16 @@ export default function BPage() {
     return (
         <div className="bPage--style" style={pageStyle}>
             <div className="bPage--left" style={leftStyle}>
-                <p className="bph--who">Karl Tammehoid</p>
-                <p className="bph--what">Software Development Student</p>
-                <p className="bph--why">I build immersive and user-friendly experiences,
+                <p className="bpl--who">Karl Tammehoid</p>
+                <p className="bpl--what">Software Development Student</p>
+                <p className="bpl--why">I build immersive and user-friendly experiences,
                 focused on creativity and functionality.</p>
-                <div className="bph--nav">
+                <div className="bpl--nav">
                     <p>ABOUT</p>
                     <p>EXPERIENCE</p>
                     <p>PROJECTS</p>
                 </div>
-                <div className="bph--images">
+                <div className="bpl--images">
                     <a href="https://github.com/scytheggg" target="_blank" rel="noreferrer">
                         <div className="github--logo">
                             <img className="filtered github--filtered" src="./photos/github-logo-filtered.png" alt="Github Filtered" width="24" height="23" />
@@ -49,6 +49,9 @@ export default function BPage() {
                 </div>
             </div>
             <div className="bPage--right" style={rightStyle}>
+                <div className="bpr--about"></div>
+                <div className="bpr--experience"></div>
+                <div className="bpr--projects"></div>
             </div>
         </div>
     )

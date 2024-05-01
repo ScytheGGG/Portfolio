@@ -46,25 +46,25 @@ body {
 .bPage--left {
   margin-left: 7.5%;
 
-  .bph--who {
+  .bpl--who {
     font-size: 52px;
     font-weight: bold;
   }
 
-  .bph--what {
+  .bpl--what {
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 500;
     margin-top: -4%;
   }
 
-  .bph--why {
+  .bpl--why {
     color: var(--grayish);
     max-width: 30%;
     line-height: 1.5;
     font-size: 17px;
   }
 
-  .bph--nav {
+  .bpl--nav {
     margin-top: 5%;
     margin-left: 4%;
     font-size: 13px;
@@ -73,7 +73,7 @@ body {
     letter-spacing: 1.5px;
   }
 
-  .bph--images {
+  .bpl--images {
     display: flex;
     padding-top: 2.75%;
     padding-left: 5px;
@@ -107,6 +107,10 @@ body {
 
 /* - - - - - - - - - - -- - - - - - -- - - - - - - - - -- -  - - - - - */
 /* Page section */
+
+.bPage--right {
+
+}
 
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////// */
