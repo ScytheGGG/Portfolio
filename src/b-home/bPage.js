@@ -3,11 +3,15 @@ import React from "react";
 export default function BPage() {
     const pageStyle = {
         fontFamily: 'Calibri, Inter, sans-serif', // Specify calibri as the primary font
+        display: 'flex',
+        position: 'relative',
     };
 
     const leftStyle = {
         position: 'sticky',
-        flex: '0 0 300px',
+        top: 'calc(15% + 20px)', // Adjusted top position to account for the margin and padding
+        height: 'calc(100vh - 7.5%)',
+        boxSizing: 'border-box', // Include padding in the width calculation
     };
 
     const rightStyle = {
@@ -49,9 +53,44 @@ export default function BPage() {
                 </div>
             </div>
             <div className="bPage--right" style={rightStyle}>
-                <div className="bpr--about"></div>
-                <div className="bpr--experience"></div>
-                <div className="bpr--projects"></div>
+                <div className="bpr--about">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
+                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+                    qui officia deserunt mollit anim id est laborum.</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
+                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+                    qui officia deserunt mollit anim id est laborum.</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
+                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+                    qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div className="bpr--experience">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
+                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+                    qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div className="bpr--projects">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
+                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+                    qui officia deserunt mollit anim id est laborum.</p>
+                </div>
             </div>
         </div>
     )

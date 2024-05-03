@@ -34,14 +34,14 @@ body {
 /* ▒█▄▄█ ░░ ▒█▄▄▀ ▄█▄ ░░▀▄▀░ ▄█▄ ▒█▄▄▄█ ▄█▄ ▒█▄▄▄█ ▒█░░▀█ */
 
 /* //////////////////////////////////////////////////////////////////////////////////////// */
-
-
-/* - - - - - - - - - - -- - - - - - -- - - - - - - - - -- -  - - - - - */
-/* Navbar section */
 .bPage--style {
   color: var(--white);
   margin-top: 7.5%;
+  display: flex;
 }
+
+/* - - - - - - - - - - -- - - - - - -- - - - - - - - - -- -  - - - - - */
+/* Navbar section */
 
 .bPage--left {
   margin-left: 7.5%;
@@ -49,23 +49,24 @@ body {
   .bpl--who {
     font-size: 52px;
     font-weight: bold;
+    margin-top: 0;
   }
 
   .bpl--what {
     font-size: 22px;
     font-weight: 500;
-    margin-top: -4%;
+    margin-top: -8%;
   }
 
   .bpl--why {
     color: var(--grayish);
-    max-width: 30%;
+    max-width: 65%;
     line-height: 1.5;
     font-size: 17px;
   }
 
   .bpl--nav {
-    margin-top: 5%;
+    margin-top: 10%;
     margin-left: 4%;
     font-size: 13px;
     font-weight: bold;
@@ -109,7 +110,8 @@ body {
 /* Page section */
 
 .bPage--right {
-
+  margin-right: 7.5%;
+  color: var(--white);
 }
 
 
