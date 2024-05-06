@@ -1,4 +1,4 @@
-export default [
+const bPageExpData = [
     {
         date: "JAN - MARCH 2024", 
         title: "Developer Intern · Tutors",
@@ -14,4 +14,6 @@ export default [
         title: "Founder · Tesla",
         details: "car go brrrr",
     },
-]
+];
+
+export default bPageExpData;
