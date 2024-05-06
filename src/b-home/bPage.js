@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function BPage() {
+export default function BPage({ entries }) {
     const pageStyle = {
         fontFamily: 'Calibri, Inter, sans-serif', // Specify calibri as the primary font
         display: 'flex',
@@ -9,13 +9,13 @@ export default function BPage() {
 
     const leftStyle = {
         position: 'sticky',
-        top: 'calc(15% + 20px)', // Adjusted top position to account for the margin and padding
-        height: 'calc(100vh - 7.5%)',
+        top: 'calc(14.5% + 20px)', // Adjusted top position to account for the margin and padding
+        height: 'calc(100vh - 7%)',
         boxSizing: 'border-box', // Include padding in the width calculation
     };
 
     const rightStyle = {
-        flex: '1', // Flex grow to fill remaining space
+        width: '48%',
         overflowY: 'auto', // Enable vertical scrolling if content overflows
     };
 
@@ -76,12 +76,14 @@ export default function BPage() {
                     qui officia deserunt mollit anim id est laborum.</p>
                 </div>
                 <div className="bpr--experience">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
-                    qui officia deserunt mollit anim id est laborum.</p>
+                    {entries.map((entry, index) => (
+                        <div className="bpre--layout" key={index}>
+                        <p className="bpre--date">{entry.date}</p>
+                        <p className="bpre--title">{entry.title}</p>
+                        <p className="bpre--details">{entry.details}</p>
+                        </div>
+                    ))}
+                    <p className="bpre--resume">View Resume</p>
                 </div>
                 <div className="bpr--projects">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
@@ -90,6 +92,7 @@ export default function BPage() {
                     irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
                     nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
                     qui officia deserunt mollit anim id est laborum.</p>
+                    <p>View Project Archive</p>
                 </div>
             </div>
         </div>

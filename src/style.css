@@ -111,7 +111,52 @@ body {
 
 .bPage--right {
   margin-right: 7.5%;
-  color: var(--white);
+  color: var(--grayish);
+  font-size: 18px;
+
+  .bpr--about {
+    margin-bottom: 20%;
+  }
+
+  .bpr--experience {
+    margin-bottom: 20%;
+
+    .bpre--layout {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+    }
+
+    .bpre--date {
+      position: absolute; /* Set position to absolute */
+      top: 0; /* Position it at the top of the parent container */
+      left: 0; /* Position it at the left of the parent container */
+      padding-right: 2.5%;
+      padding-top: 2%;
+      font-size: 12.5px;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+    }
+
+    .bpre--title {
+      padding-left: 27.5%;
+      font-size: 18px;
+      color: var(--white);
+      display: block;
+    }
+
+    .bpre--details {
+      margin-top: -1%;
+      padding-left: 27.5%;
+      font-size: 16px; 
+    }
+
+    .bpre--resume {
+      padding-right: 20px;
+      font-size: 17px;
+      letter-spacing: 1.5px;
+    }
+  }
 }
 
 
