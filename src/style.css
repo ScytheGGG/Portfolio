@@ -8,6 +8,11 @@ body {
   overflow-y: scroll;
 }
 
+a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit text color */
+}
+
 /* CUSTOM SCROLLBAR */
   ::-webkit-scrollbar {
   width: 13px;
@@ -25,6 +30,7 @@ body {
  --dark_blue: #141925;
  --white: #E2E8F0;
  --grayish: #94A3B9;
+ --neon: rgb(94 234 212);
 }
 
 /* ///////////////////////////////////////////////////////////////////////////////////////// */
@@ -115,11 +121,11 @@ body {
   font-size: 18px;
 
   .bpr--about {
-    margin-bottom: 20%;
+    margin-bottom: 10%;
   }
 
   .bpr--experience {
-    margin-bottom: 20%;
+    margin-bottom: 10%;
 
     .bpre--layout {
       display: flex;
@@ -131,15 +137,16 @@ body {
       position: absolute; /* Set position to absolute */
       top: 0; /* Position it at the top of the parent container */
       left: 0; /* Position it at the left of the parent container */
-      padding-right: 2.5%;
-      padding-top: 2%;
+      padding-right: 2%;
+      padding-left: 4.15%;
+      padding-top: 1.75%;
       font-size: 12.5px;
       font-weight: bold;
-      letter-spacing: 1.5px;
+      letter-spacing: 1.2px;
     }
 
     .bpre--title {
-      padding-left: 27.5%;
+      padding-left: 30%;
       font-size: 18px;
       color: var(--white);
       display: block;
@@ -147,15 +154,44 @@ body {
 
     .bpre--details {
       margin-top: -1%;
-      padding-left: 27.5%;
-      font-size: 16px; 
+      padding-left: 30%;
+      font-size: 16px;
+      width: 95%; 
     }
+  }
 
-    .bpre--resume {
-      padding-right: 20px;
-      font-size: 17px;
-      letter-spacing: 1.5px;
-    }
+  /* - - - - - - - - - -- - - - - - - -  */
+  /* hovering effects and the box itself */
+  .bpre--box {
+    border-radius: 8px;
+    margin-bottom: 2%;
+    transition: background-color 0.3s ease;
+  }
+
+  .bpre--box:hover {
+    border-top: 1px solid rgb(229, 231, 235, 0.1);
+    background-color: rgb(229, 231, 235, 0.05); /* Semi-transparent white color on hover */
+  }
+
+  .bpre--box:hover * {
+    background-color: transparent; 
+  }
+
+  .bpre--box:hover .bpre--title {
+    color: var(--neon);
+  }
+
+  .bpre--box:hover ~ .bpre--box .bpre--title {
+    color: green; /* Change the title color to gray for other boxes when one is hovered */
+  }
+
+  /* - - - - - - - - - -- - - - - - - -  */
+  /* back to normal stuff */
+  .bpr--view {
+    color: var(--white);
+    padding-right: 20px;
+    font-size: 17px;
+    letter-spacing: 1.5px;
   }
 }
 

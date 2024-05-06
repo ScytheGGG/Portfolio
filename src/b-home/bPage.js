@@ -9,7 +9,7 @@ export default function BPage({ entries }) {
 
     const leftStyle = {
         position: 'sticky',
-        top: 'calc(14.5% + 20px)', // Adjusted top position to account for the margin and padding
+        top: 'calc(15% + 20px)', // Adjusted top position to account for the margin and padding
         height: 'calc(100vh - 7%)',
         boxSizing: 'border-box', // Include padding in the width calculation
     };
@@ -77,13 +77,17 @@ export default function BPage({ entries }) {
                 </div>
                 <div className="bpr--experience">
                     {entries.map((entry, index) => (
-                        <div className="bpre--layout" key={index}>
-                        <p className="bpre--date">{entry.date}</p>
-                        <p className="bpre--title">{entry.title}</p>
-                        <p className="bpre--details">{entry.details}</p>
-                        </div>
+                        <a href={entry.website} target="_blank" rel="noreferrer" key={index}>
+                            <div className="bpre--box" key={index}>
+                                <div className="bpre--layout">
+                                    <p className="bpre--date">{entry.date}</p>
+                                    <p className="bpre--title">{entry.title}</p>
+                                    <p className="bpre--details">{entry.details}</p>
+                                </div>
+                            </div>
+                        </a>
                     ))}
-                    <p className="bpre--resume">View Resume</p>
+                    <p className="bpr--view">View Resume</p>
                 </div>
                 <div className="bpr--projects">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
@@ -92,7 +96,7 @@ export default function BPage({ entries }) {
                     irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
                     nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
                     qui officia deserunt mollit anim id est laborum.</p>
-                    <p>View Project Archive</p>
+                    <p className="bpr--view">View Project Archive</p>
                 </div>
             </div>
         </div>
