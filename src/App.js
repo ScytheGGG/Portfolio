@@ -2,13 +2,19 @@ import React from "react"
 
 // website elements
 import BPage from "./b-home/bPage"
-import bPage_exp from "./b-home/bPage-exp-data"
+import bPageExpData from "./b-home/bPage-exp-data"
+import bPageProjectData from "./b-home/bPage-project-data"
+import MouseTrail from "./b-home/bPage-mouse"
 
 // the app itself
 export default function App() {
   return (
     <div>
-      <BPage entries={bPage_exp} />
+      <MouseTrail />
+      <BPage 
+        entries={bPageExpData}
+        projects={bPageProjectData}
+      />
     </div>
   )
 }

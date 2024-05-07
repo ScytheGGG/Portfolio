@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function BPage({ entries }) {
+export default function BPage({ entries, projects }) {
     const pageStyle = {
         fontFamily: 'Calibri, Inter, sans-serif', // Specify calibri as the primary font
         display: 'flex',
@@ -21,6 +21,7 @@ export default function BPage({ entries }) {
 
     return (
         <div className="bPage--style" style={pageStyle}>
+            <div class="mouse-trail"></div>
             <div className="bPage--left" style={leftStyle}>
                 <p className="bpl--who">Karl Tammehoid</p>
                 <p className="bpl--what">Software Development Student</p>
@@ -78,25 +79,30 @@ export default function BPage({ entries }) {
                 <div className="bpr--experience">
                     {entries.map((entry, index) => (
                         <a href={entry.website} target="_blank" rel="noreferrer" key={index}>
-                            <div className="bpre--box" key={index}>
-                                <div className="bpre--layout">
-                                    <p className="bpre--date">{entry.date}</p>
-                                    <p className="bpre--title">{entry.title}</p>
-                                    <p className="bpre--details">{entry.details}</p>
+                            <div className="bpr--box" key={index}>
+                                <div className="bpr--layout">
+                                    <p className="bpr--date">{entry.date}</p>
+                                    <p className="bpr--title">{entry.title}</p>
+                                    <p className="bpr--details">{entry.details}</p>
                                 </div>
                             </div>
                         </a>
                     ))}
-                    <p className="bpr--view">View Resume</p>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer" className="bpre--view">View Résumé</a>
                 </div>
                 <div className="bpr--projects">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
-                    qui officia deserunt mollit anim id est laborum.</p>
-                    <p className="bpr--view">View Project Archive</p>
+                    {projects.map((project, index) => (
+                        <a href={project.website} target="_blank" rel="noreferrer" key={index}>
+                            <div className="bpr--box" key={project}>
+                                <div className="bpr--layout">
+                                    <img className="bpr--image" src={project.image} alt="Project" />
+                                    <p className="bpr--title">{project.title}</p>
+                                    <p className="bpr--details">{project.details}</p>
+                                </div>
+                            </div>
+                        </a>
+                    ))}
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer" className="bprp--view">View Project Archive</a>
                 </div>
             </div>
         </div>

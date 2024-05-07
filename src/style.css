@@ -23,6 +23,19 @@ a {
   background: var(--white);
 }
 
+/* CUSTOM MOUSE EFFECT */
+.mouse-shadow {
+  position: fixed;
+  width: 175px; /* Adjust size of the shadow */
+  height: 175px; /* Adjust size of the shadow */
+  border-radius: 50%;
+  background-color: rgb(27, 58, 129);/* Brighter color than the background */
+  pointer-events: none; /* Ensure the shadow does not interfere with mouse events */
+  filter: blur(150px); /* Add blur effect */
+  z-index: 9999; /* Ensure the shadow is above other elements */
+  transform: translate(-50%, -50%); /* Center the shadow */
+}
+
 /* //////////////////////////////////// */
 
 :root { 
@@ -121,77 +134,121 @@ a {
   font-size: 18px;
 
   .bpr--about {
-    margin-bottom: 10%;
+    margin-bottom: 20%;
+  }
+  
+  /*- space between the sections */
+  .bpr--experience {
+    margin-bottom: 20%;
   }
 
-  .bpr--experience {
-    margin-bottom: 10%;
+  .bpr--projects {
+    margin-bottom: 20%;
+  }
 
-    .bpre--layout {
-      display: flex;
-      position: relative;
-      flex-direction: column;
-    }
+  /* back to other stuff */
+  .bpr--layout {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 5%;
+  }
 
-    .bpre--date {
-      position: absolute; /* Set position to absolute */
-      top: 0; /* Position it at the top of the parent container */
-      left: 0; /* Position it at the left of the parent container */
-      padding-right: 2%;
-      padding-left: 4.15%;
-      padding-top: 1.75%;
-      font-size: 12.5px;
-      font-weight: bold;
-      letter-spacing: 1.2px;
-    }
+  .bpr--date {
+    position: absolute; /* Set position to absolute */
+    top: 0; /* Position it at the top of the parent container */
+    left: 0; /* Position it at the left of the parent container */
+    padding-right: 2%;
+    padding-left: 4.15%;
+    padding-top: 1.75%;
+    font-size: 12.5px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+  }
 
-    .bpre--title {
-      padding-left: 30%;
-      font-size: 18px;
-      color: var(--white);
-      display: block;
-    }
+  .bpr--image {
+    position: absolute; /* Set position to absolute */
+    top: 0; /* Position it at the top of the parent container */
+    left: 0; /* Position it at the left of the parent container */
+    padding-left: 4.15%;
+    margin-top: 25px;
+    width: 25%;
+  }
 
-    .bpre--details {
-      margin-top: -1%;
-      padding-left: 30%;
-      font-size: 16px;
-      width: 95%; 
-    }
+  .bpr--title {
+    padding-left: 30%;
+    font-size: 18px;
+    color: var(--white);
+    display: block;
+  }
+
+  .bpr--details {
+    margin-top: -1%;
+    padding-left: 30%;
+    font-size: 16px;
+    width: 95%; 
   }
 
   /* - - - - - - - - - -- - - - - - - -  */
   /* hovering effects and the box itself */
-  .bpre--box {
+  .bpr--box {
     border-radius: 8px;
     margin-bottom: 2%;
     transition: background-color 0.3s ease;
   }
 
-  .bpre--box:hover {
+  .bpr--box:hover {
     border-top: 1px solid rgb(229, 231, 235, 0.1);
     background-color: rgb(229, 231, 235, 0.05); /* Semi-transparent white color on hover */
   }
 
-  .bpre--box:hover * {
+  .bpr--box:hover * {
     background-color: transparent; 
   }
 
-  .bpre--box:hover .bpre--title {
+  .bpr--box:hover .bpr--title {
     color: var(--neon);
-  }
-
-  .bpre--box:hover ~ .bpre--box .bpre--title {
-    color: green; /* Change the title color to gray for other boxes when one is hovered */
   }
 
   /* - - - - - - - - - -- - - - - - - -  */
   /* back to normal stuff */
-  .bpr--view {
+  .bpre--view {
     color: var(--white);
     padding-right: 20px;
+    padding-left: 4.15%;
     font-size: 17px;
     letter-spacing: 1.5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+
+  .bpre--view:hover {
+    color: var(--neon);
+  }
+
+  .bprp--view {
+    color: var(--white);
+    padding-right: 20px;
+    padding-left: 4.15%;
+    font-size: 17px;
+    letter-spacing: 1.5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+
+  .bprp--view::after {
+    content: '';
+    position: absolute;
+    left: 0; 
+    bottom: -2px; 
+    width: 100%; 
+    height: 2px; 
+    background-color: transparent;
+    transition: background-color 0.3s ease; 
+  }
+
+  .bprp--view:hover::after {
+    background-color: var(--gray);
   }
 }
 
