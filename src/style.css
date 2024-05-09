@@ -26,12 +26,12 @@ a {
 /* CUSTOM MOUSE EFFECT */
 .mouse-shadow {
   position: fixed;
-  width: 175px; /* Adjust size of the shadow */
-  height: 175px; /* Adjust size of the shadow */
-  border-radius: 50%;
-  background-color: rgb(27, 58, 129);/* Brighter color than the background */
+  width: 200px; /* Adjust size of the shadow */
+  height: 200px; /* Adjust size of the shadow */
+  border-radius: 100%;
+  background-color: rgb(19, 53, 133);/* Brighter color than the background */
   pointer-events: none; /* Ensure the shadow does not interfere with mouse events */
-  filter: blur(150px); /* Add blur effect */
+  filter: blur(200px); /* Add blur effect */
   z-index: 9999; /* Ensure the shadow is above other elements */
   transform: translate(-50%, -50%); /* Center the shadow */
 }
@@ -43,7 +43,8 @@ a {
  --dark_blue: #141925;
  --white: #E2E8F0;
  --grayish: #94A3B9;
- --neon: rgb(94 234 212);
+ --neon: #5EEAD4;
+ --dark-neon: rgba(45,212,191,.1);
 }
 
 /* ///////////////////////////////////////////////////////////////////////////////////////// */
@@ -189,6 +190,19 @@ a {
     width: 95%; 
   }
 
+  .bpr--status {
+    margin-top: 0;
+    margin-left: 30%;
+    padding: 1%;
+    padding-top: 0.2%;
+    width: 22%;
+    border-radius: 50px;
+    font-size: 16px;
+    text-align: center;
+    color: var(--neon);
+    background-color: var(--dark-neon);
+  }
+
   /* - - - - - - - - - -- - - - - - - -  */
   /* hovering effects and the box itself */
   .bpr--box {
@@ -202,7 +216,7 @@ a {
     background-color: rgb(229, 231, 235, 0.05); /* Semi-transparent white color on hover */
   }
 
-  .bpr--box:hover * {
+  .bpr--box:hover *:not(.bpr--status) {
     background-color: transparent; 
   }
 
@@ -210,45 +224,88 @@ a {
     color: var(--neon);
   }
 
-  /* - - - - - - - - - -- - - - - - - -  */
-  /* back to normal stuff */
+  /* - - - - - - - - - -- - - - - - - - - - - - - -- - */
+  /* - - - - - - - - - -- - - - - - - -  -- - - -- - - */
+  /* The buttons that take to other pages.*/
+  .bpre--archive {
+    display: flex; /* Display children in a row */
+    align-items: center; /* Align children vertically in the center */
+  }
+
   .bpre--view {
     color: var(--white);
-    padding-right: 20px;
+    padding-right: 1.5%;
     padding-left: 4.15%;
     font-size: 17px;
     letter-spacing: 1.5px;
-    transition: background-color 0.3s ease;
     cursor: pointer;
+    transition: color 0.2s ease; /* Add transition for text color */
   }
-
-  .bpre--view:hover {
-    color: var(--neon);
+  
+  .brpe--img {
+    position: relative;
   }
-
-  .bprp--view {
-    color: var(--white);
-    padding-right: 20px;
-    padding-left: 4.15%;
-    font-size: 17px;
-    letter-spacing: 1.5px;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-  }
-
-  .bprp--view::after {
-    content: '';
+  
+  .brpe--img img {
     position: absolute;
-    left: 0; 
-    bottom: -2px; 
-    width: 100%; 
-    height: 2px; 
-    background-color: transparent;
-    transition: background-color 0.3s ease; 
+    top: -4px;
+    left: 0;
+    transition: transform 0.2s ease, filter 0.2s ease;
+  }
+  
+  .brpe--img img.filtered {
+    filter: grayscale(100%);
+  }
+  
+  .bpre--archive:hover .brpe--img img {
+    transform: translate(5px, -5px);
+  }
+  
+  .bpre--archive:hover .bpre--view {
+    color: var(--neon); /* Change text color on hover */
+  }
+  
+  .bpre--archive:hover .brpe--img img.filtered {
+    filter: grayscale(0%); /* Revert filter on hover */
   }
 
-  .bprp--view:hover::after {
-    background-color: var(--gray);
+  /* - - - - - - - - -- - - - -- - -*/
+  .bprp--archive {
+    display: flex; /* Display children in a row */
+    align-items: center; /* Align children vertically in the center */
+    position: relative;
+
+    .bprp--view {
+      color: var(--white);
+      padding-right: 1.5%;
+      padding-left: 4.15%;
+      font-size: 17px;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      transition: padding-right 0.2s;
+      position: relative;
+    }
+
+    .bprp--view:hover {
+      padding-right: 2.5%;
+    }
+
+    .bprp--view::after {
+      content: '';
+      position: absolute;
+      left: 10%;
+      bottom: -1.5px; /* Adjust the gap of the underline */
+      width: 83%;
+      height: 1.5px; /* Adjust the thickness of the underline */
+      background-image: linear-gradient(to right, var(--neon), var(--neon));
+      background-size: 0% 2px; /* Initially set to 0 width */
+      background-repeat: no-repeat;
+      transition: background-size 0.3s; /* Only transition width */
+    }
+    
+    .bprp--view:hover::after {
+      background-size: 100% 2px; /* Expand width on hover */
+    }
   }
 }
 

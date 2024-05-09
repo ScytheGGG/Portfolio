@@ -33,7 +33,7 @@ export default function BPage({ entries, projects }) {
                     <p>PROJECTS</p>
                 </div>
                 <div className="bpl--images">
-                    <a href="https://github.com/scytheggg" target="_blank" rel="noreferrer">
+                    <a href="https://github.com/kthoid" target="_blank" rel="noreferrer">
                         <div className="github--logo">
                             <img className="filtered github--filtered" src="./photos/github-logo-filtered.png" alt="Github Filtered" width="24" height="23" />
                             <img className="normal github--normal" src="./photos/github-logo.png" alt="Github Normal" width="24" height="23" />
@@ -88,7 +88,13 @@ export default function BPage({ entries, projects }) {
                             </div>
                         </a>
                     ))}
-                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer" className="bpre--view">View Résumé</a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer" class="bpre--archive">
+                        <div class="bpre--view">View Resume</div>
+                        <div class="brpe--img logo">
+                            <img src="./photos/arrows/arrow-ne.png" alt="New tab" class="brpe--img normal" width="10" height="10"></img>
+                            <img src="./photos/arrows/arrow-ne-filtered.png" alt="New tab" class="brpe--img filtered" width="10" height="10"></img>
+                        </div>
+                    </a>
                 </div>
                 <div className="bpr--projects">
                     {projects.map((project, index) => (
@@ -98,11 +104,15 @@ export default function BPage({ entries, projects }) {
                                     <img className="bpr--image" src={project.image} alt="Project" />
                                     <p className="bpr--title">{project.title}</p>
                                     <p className="bpr--details">{project.details}</p>
+                                    <p className="bpr--status">{project.status}</p>
                                 </div>
                             </div>
                         </a>
                     ))}
-                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer" className="bprp--view">View Project Archive</a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer" class="bprp--archive">
+                        <div className="bprp--view">View Project Archive</div>
+                        <img className="bprp--arrow" src="./photos/arrows/arrow-right.png" alt="arrow right" width="12" height="9"></img>
+                    </a>
                 </div>
             </div>
         </div>
