@@ -109,7 +109,7 @@ a {
       position: absolute;
       top: 0;
       left: 0;
-      transition: opacity 0.3s ease; /* Smooth transition for opacity */
+      transition: opacity 0.2s ease; /* Smooth transition for opacity */
     }
     
     .github--logo:hover .github--filtered,
@@ -208,7 +208,7 @@ a {
   .bpr--box {
     border-radius: 8px;
     margin-bottom: 2%;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.2s ease;
   }
 
   .bpr--box:hover {
@@ -222,6 +222,38 @@ a {
 
   .bpr--box:hover .bpr--title {
     color: var(--neon);
+  }
+
+  .bpr--title-wrapper {
+    display: flex;
+    align-items: center; /* Align arrow and title vertically */
+  }
+  
+  .bpr--title-wrapper .brp--img {
+    position: relative;
+  }
+  
+  .bpr--title-wrapper .brp--img img {
+    position: absolute;
+    top: -4px;
+    left: 10px; /* Adjust the positioning of the arrow */
+    transition: transform 0.2s ease, filter 0.2s ease; /* Add transition for smooth animation */
+  }
+  
+  .brp--img img.filtered {
+    filter: grayscale(100%);
+  }
+  
+  .bpr--box:hover .bpr--title {
+    color: var(--neon); /* Change text color on hover */
+  }
+  
+  .bpr--box:hover .brp--img img {
+    transform: translate(5px, -5px); /* Move the arrow 5px to the right and 5px up on hover */
+  }
+  
+  .bpr--box:hover .brp--img img.filtered {
+    filter: grayscale(0%); /* Apply grayscale filter on hover */
   }
 
   /* - - - - - - - - - -- - - - - - - - - - - - - -- - */
@@ -293,9 +325,9 @@ a {
     .bprp--view::after {
       content: '';
       position: absolute;
-      left: 10%;
+      left: 11%;
       bottom: -1.5px; /* Adjust the gap of the underline */
-      width: 83%;
+      width: 82%;
       height: 1.5px; /* Adjust the thickness of the underline */
       background-image: linear-gradient(to right, var(--neon), var(--neon));
       background-size: 0% 2px; /* Initially set to 0 width */

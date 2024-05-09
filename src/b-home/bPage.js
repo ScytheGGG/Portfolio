@@ -82,7 +82,13 @@ export default function BPage({ entries, projects }) {
                             <div className="bpr--box" key={index}>
                                 <div className="bpr--layout">
                                     <p className="bpr--date">{entry.date}</p>
-                                    <p className="bpr--title">{entry.title}</p>
+                                    <div className="bpr--title-wrapper">
+                                        <p className="bpr--title">{entry.title}</p>
+                                        <div class="brp--img logo">
+                                            <img src="./photos/arrows/arrow-ne.png" alt="New tab" class="brp--img normal" width="10" height="10"></img>
+                                            <img src="./photos/arrows/arrow-ne-filtered.png" alt="New tab" class="brp--img filtered" width="10" height="10"></img>
+                                        </div>
+                                    </div>
                                     <p className="bpr--details">{entry.details}</p>
                                 </div>
                             </div>
@@ -102,7 +108,13 @@ export default function BPage({ entries, projects }) {
                             <div className="bpr--box" key={project}>
                                 <div className="bpr--layout">
                                     <img className="bpr--image" src={project.image} alt="Project" />
-                                    <p className="bpr--title">{project.title}</p>
+                                    <div className="bpr--title-wrapper">
+                                        <p className="bpr--title">{project.title}</p>
+                                        <div class="brp--img logo">
+                                            <img src="./photos/arrows/arrow-ne.png" alt="New tab" class="brp--img normal" width="10" height="10"></img>
+                                            <img src="./photos/arrows/arrow-ne-filtered.png" alt="New tab" class="brp--img filtered" width="10" height="10"></img>
+                                        </div>
+                                    </div>
                                     <p className="bpr--details">{project.details}</p>
                                     <p className="bpr--status">{project.status}</p>
                                 </div>
