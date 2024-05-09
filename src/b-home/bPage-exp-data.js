@@ -3,7 +3,7 @@ const bPageExpData = [
         website: "https://www.tutors.fi/en",
         date: "JAN - MARCH 2024", 
         title: "Developer Intern · Tutors",
-        details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        details: "I focused on website analysis, reporting bugs and usability issues. I also dove into React and TypeScript, while also creating personal website projects.",
         skills: "",
     },
 ];
