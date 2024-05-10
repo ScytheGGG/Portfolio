@@ -85,6 +85,13 @@ a {
     font-size: 17px;
   }
 
+  /* - - - - - - - - - - */
+  /* NAVIGATION */
+  .navbar-text {
+    transition: transform 0.3s ease; /* Add transition for the text movement */
+    z-index: 1; /* Ensure the text appears above the line */
+  }
+
   .bpl--nav {
     margin-top: 10%;
     margin-left: 4%;
@@ -95,6 +102,39 @@ a {
     user-select: none;
   }
 
+  .bpl--nav p {
+    position: relative;
+    display: flex;
+    align-items: center; /* Center vertically */
+  }
+
+  .bpl--nav p:hover .navbar-text {
+    color: var(--white) !important;
+  }
+
+  .bpl--nav p::before {
+    content: "";
+    position: absolute;
+    left: -4%; /* Align the line with the text */
+    top: 50%; /* Vertically center the line */
+    height: 2px; /* Set the height of the line */
+    width: 6%; /* Set the initial width of the line */
+    background-color: var(--grayish); /* Set the color of the line */
+    transition: width 0.3s ease; /* Add transition for the line width */
+  }
+
+  .bpl--nav p:hover .navbar-text,
+  .bpl--nav p.active .navbar-text {
+    transform: translateX(30px); /* Move the text to the right by 20px when hovered or active */
+  }
+
+  .bpl--nav p:hover::before,
+  .bpl--nav p.active::before {
+    width: 12%; /* Expand the width of the line when hovered or active */
+  }
+
+  /* - - - - - - - - - - */
+  /* PICTURES*/
   .bpl--images {
     display: flex;
     padding-top: 2.75%;
@@ -135,17 +175,14 @@ a {
   margin-right: 7.5%;
   color: var(--grayish);
   font-size: 18px;
-
-  .bpr--about {
-    margin-bottom: 20%;
-  }
   
   /*- space between the sections */
   .bpr--experience {
-    margin-bottom: 20%;
+    margin-top: 20%;
   }
 
   .bpr--projects {
+    margin-top: 20%;
     margin-bottom: 10%;
   }
 

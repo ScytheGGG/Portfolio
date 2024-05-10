@@ -42,11 +42,19 @@ export default function BPage({ entries, projects }) {
     // Function to handle navigation clicks
     const handleNavigationClick = (section) => {
         setActiveSection(section);
-        const element = document.getElementById(`bpr--${section}`);
-        if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
+        if (section === "about") {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+            const element = document.querySelector(`.bpr--${section}`);
+            if (element) {
+                const viewportHeight = window.innerHeight;
+                const yOffsetPercentage = 0.1; // Adjust this value to set the percentage of viewport height as the offset
+                const yOffset = -viewportHeight * yOffsetPercentage;
+                const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+            }
         }
-    };
+    }
 
     /* - - - - - - - - - -- - - - -- - - -*/
     /* - - - - - - - - - -- - - - -- - - -*/
@@ -78,25 +86,32 @@ export default function BPage({ entries, projects }) {
                 <p className="bpl--why">I build immersive and user-friendly experiences,
                 focused on creativity and functionality.</p>
                 <div className="bpl--nav">
-                    <p 
-                        onClick={() => handleNavigationClick("about")} 
-                        style={{ 
-                            color: activeSection === "about" ? "var(--white)" : "var(--grayish)",
-                            cursor: "pointer"  // Change cursor to pointer
-                        }} >ABOUT
+                    <p
+                        onClick={() => handleNavigationClick("about")}
+                        className={activeSection === "about" ? "active" : ""}
+                        style={{
+                            cursor: "pointer", // Change cursor to pointer
+                            position: "relative", // Required for positioning pseudo-element
+                            paddingLeft: "5%" // Initial padding for the text
+                        }}><span className="navbar-text" style={{ color: activeSection === "about" ? "var(--white)" : "var(--grayish)" }}>ABOUT</span>
                     </p>
-                    <p onClick={() => handleNavigationClick("experience")} 
-                        style={{ 
-                            color: activeSection === "experience" ? "var(--white)" : "var(--grayish)",
-                            cursor: "pointer"  // Change cursor to pointer
-                        }} >EXPERIENCE
+                    <p
+                        onClick={() => handleNavigationClick("experience")}
+                        className={activeSection === "experience" ? "active" : ""}
+                        style={{
+                            cursor: "pointer", // Change cursor to pointer
+                            position: "relative", // Required for positioning pseudo-element
+                            paddingLeft: "5%" // Initial padding for the text
+                        }}><span className="navbar-text" style={{ color: activeSection === "experience" ? "var(--white)" : "var(--grayish)" }}>EXPERIENCE</span>
                     </p>
-                    <p 
-                        onClick={() => handleNavigationClick("projects")} 
-                        style={{ 
-                            color: activeSection === "projects" ? "var(--white)" : "var(--grayish)",
-                            cursor: "pointer"  // Change cursor to pointer
-                        }} >PROJECTS
+                    <p
+                        onClick={() => handleNavigationClick("projects")}
+                        className={activeSection === "projects" ? "active" : ""}
+                        style={{
+                            cursor: "pointer", // Change cursor to pointer
+                            position: "relative", // Required for positioning pseudo-element
+                            paddingLeft: "5%" // Initial padding for the text
+                        }}><span className="navbar-text" style={{ color: activeSection === "projects" ? "var(--white)" : "var(--grayish)" }}>PROJECTS</span>
                     </p>
                 </div>
                 <div className="bpl--images">
