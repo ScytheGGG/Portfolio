@@ -203,6 +203,21 @@ a {
     background-color: var(--dark-neon);
   }
 
+  .bpr--skills {
+    margin-left: 30%;
+
+    .skill-box {
+      display: inline-block;
+      margin-bottom: 4%;
+      margin-right: 5px; /* Adjust as needed */
+      padding: 5px 10px; /* Adjust as needed */
+      border-radius: 50px;
+      font-size: 15px;
+      background-color: var(--dark-neon);
+      color: var(--neon);
+    }
+  }
+
   /* - - - - - - - - - -- - - - - - - -  */
   /* hovering effects and the box itself */
   .bpr--box {
@@ -218,6 +233,10 @@ a {
 
   .bpr--box:hover *:not(.bpr--status) {
     background-color: transparent; 
+  }
+
+  .bpr--box:hover .bpr--skills .skill-box {
+    background-color: var(--dark-neon); /* Ensure skill boxes retain background color when hovering over .bpr--box */
   }
 
   .bpr--box:hover .bpr--title {

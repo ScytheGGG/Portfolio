@@ -90,6 +90,13 @@ export default function BPage({ entries, projects }) {
                                         </div>
                                     </div>
                                     <p className="bpr--details">{entry.details}</p>
+                                    <div className="bpr--skills">
+                                        {entry.skills.map((skill, skillIndex) => (
+                                            <div className="skill-box" key={skillIndex}>
+                                                {skill}
+                                            </div>
+                                        ))}
+                                    </div>  
                                 </div>
                             </div>
                         </a>
