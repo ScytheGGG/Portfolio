@@ -1,6 +1,56 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 export default function BPage({ entries, projects }) {
+    /* - - - - - - - - - -- - - - -- - - -*/
+    /* - - - - - - - - - -- - - - -- - - -*/
+    /* ACTIVE NAVBAR */
+    // State to track the active section
+    const [activeSection, setActiveSection] = useState("about");
+
+    // Function to update the active section based on scroll position
+    const handleScroll = () => {
+        const aboutSection = document.querySelector(".bpr--about");
+        const experienceSection = document.querySelector(".bpr--experience");
+        const projectsSection = document.querySelector(".bpr--projects");
+
+        // Calculate the top offset of each section
+        const aboutOffset = aboutSection.offsetTop;
+        const experienceOffset = experienceSection.offsetTop;
+        const projectsOffset = projectsSection.offsetTop;
+
+        // Get the current scroll position
+        const scrollPosition = window.scrollY;
+
+        // Determine the active section based on scroll position
+        if (scrollPosition >= aboutOffset && scrollPosition < experienceOffset) {
+            setActiveSection("about");
+        } else if (scrollPosition >= experienceOffset && scrollPosition < projectsOffset) {
+            setActiveSection("experience");
+        } else if (scrollPosition >= projectsOffset) {
+            setActiveSection("projects");
+        }
+    };
+
+    // Add scroll event listener when component mounts
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    // Function to handle navigation clicks
+    const handleNavigationClick = (section) => {
+        setActiveSection(section);
+        const element = document.getElementById(`bpr--${section}`);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
+    /* - - - - - - - - - -- - - - -- - - -*/
+    /* - - - - - - - - - -- - - - -- - - -*/
+
     const pageStyle = {
         fontFamily: 'Calibri, Inter, sans-serif', // Specify calibri as the primary font
         display: 'flex',
@@ -28,9 +78,26 @@ export default function BPage({ entries, projects }) {
                 <p className="bpl--why">I build immersive and user-friendly experiences,
                 focused on creativity and functionality.</p>
                 <div className="bpl--nav">
-                    <p>ABOUT</p>
-                    <p>EXPERIENCE</p>
-                    <p>PROJECTS</p>
+                    <p 
+                        onClick={() => handleNavigationClick("about")} 
+                        style={{ 
+                            color: activeSection === "about" ? "var(--white)" : "var(--grayish)",
+                            cursor: "pointer"  // Change cursor to pointer
+                        }} >ABOUT
+                    </p>
+                    <p onClick={() => handleNavigationClick("experience")} 
+                        style={{ 
+                            color: activeSection === "experience" ? "var(--white)" : "var(--grayish)",
+                            cursor: "pointer"  // Change cursor to pointer
+                        }} >EXPERIENCE
+                    </p>
+                    <p 
+                        onClick={() => handleNavigationClick("projects")} 
+                        style={{ 
+                            color: activeSection === "projects" ? "var(--white)" : "var(--grayish)",
+                            cursor: "pointer"  // Change cursor to pointer
+                        }} >PROJECTS
+                    </p>
                 </div>
                 <div className="bpl--images">
                     <a href="https://github.com/kthoid" target="_blank" rel="noreferrer">
@@ -54,7 +121,7 @@ export default function BPage({ entries, projects }) {
                 </div>
             </div>
             <div className="bPage--right" style={rightStyle}>
-                <div className="bpr--about">
+                <div className="bpr--about" id="bpr--about">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
                     exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
@@ -76,7 +143,7 @@ export default function BPage({ entries, projects }) {
                     nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
                     qui officia deserunt mollit anim id est laborum.</p>
                 </div>
-                <div className="bpr--experience">
+                <div className="bpr--experience" id="bpr--experience">
                     {entries.map((entry, index) => (
                         <a href={entry.website} target="_blank" rel="noreferrer" key={index}>
                             <div className="bpr--box" key={index}>
@@ -109,7 +176,7 @@ export default function BPage({ entries, projects }) {
                         </div>
                     </a>
                 </div>
-                <div className="bpr--projects">
+                <div className="bpr--projects" id="bpr--projects">
                     {projects.map((project, index) => (
                         <a href={project.website} target="_blank" rel="noreferrer" key={index}>
                             <div className="bpr--box" key={project}>
