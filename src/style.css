@@ -407,3 +407,27 @@ a {
 /* ▒█▄▄█ ▒█▄▄█ ░░ ▒█▄▄▀ ▄█▄ ░░▀▄▀░ ▄█▄ ▒█▄▄▄█ ▄█▄ ▒█▄▄▄█ ▒█░░▀█ */
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.bProjects--style {
+  color: var(--white);
+  margin-top: 7.5%;
+  margin-right: 7.5%;
+  margin-left: 7.5%;
+
+  .bp--return {
+    margin-left: 2%;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--neon);
+  }
+
+  .bp--title {
+    margin-top: -0%;
+    font-size: 50px;
+    font-weight: bold;
+  }
+
+  .bp--categories {
+    display: flex;
+  }
+}
