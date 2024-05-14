@@ -9,7 +9,7 @@ const bPinfo = [
     {
         year: "2024",
         project: "Codify",
-        bw: ["React", "JavaScript", "CSS/HTML", "C#"],
+        bw: ["React", "JavaScript", "CSS/HTML", "C#", "C#", "C#", "C#", "C#"],
         link: "https://kt-codify.netlify.app/",
         linkText: "codify.netlify.app",
     },

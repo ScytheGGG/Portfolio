@@ -27,7 +27,13 @@ export default function BProjects({ bpdata }) {
                     <div className="bp--project">
                         <p className="bpd--year">{bpd.year}</p>
                         <p className="bpd--project">{bpd.project}</p>
-                        <p className="bpd--bw">{bpd.bw}</p>
+                        <div className="bpd--bw">
+                            {bpd.bw.map((skill, skillIndex) => (
+                                <span key={skillIndex} className="bpdbw--box">
+                                    {skill}
+                                </span>
+                            ))}
+                        </div>
                         <a className="bpd--link" href={bpd.link} target="_blank" rel="noopener noreferrer">
                             {bpd.linkText}
                         </a>

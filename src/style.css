@@ -466,9 +466,9 @@ a {
   }
 
   .bp--project {
-    display: flex; /* Display children in a row */
-    flex-direction: row;
-    align-items: flex-start;
+    display: flex; /* Use flexbox to lay out project items */
+    justify-content: space-between; /* Ensure space between elements */
+    align-items: center; /* Center items vertically */
     padding: 10px 0;
     border-top: 1px solid rgb(229, 231, 235, 0.1);
 
@@ -482,9 +482,14 @@ a {
     }
 
     .bpd--bw {
-      margin-left: 0.5%;
-      flex: 1;
+      margin-left: 8%;
+      flex: 2;
+    }
+
+    .bpdbw--box {
       display: inline-block;
+      margin-top: 4%;
+      margin-right: 2%;
       padding: 5px 10px; /* Adjust as needed */
       border-radius: 50px;
       font-size: 15px;
@@ -494,7 +499,7 @@ a {
 
     .bpd--link {
       margin-top: 1.25%;
-      margin-left: 20%;
+      margin-left: 25%;
       flex: 1;
       color: var(--grayish)
     }
