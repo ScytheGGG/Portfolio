@@ -2,16 +2,26 @@ const bPinfo = [
     {
         year: "2024",
         project: "Buy My Data",
-        bw: ["React", "JavaScript", "CSS/HTML", "C#"],
+        status: "In Progress 🟡",
+        bw: ["React", "JavaScript", "HTML", "CSS"],
         link: "https://buy-my-data.netlify.app/",
         linkText: "buymydata.netlify.app",
     }, 
     {
         year: "2024",
         project: "Codify",
-        bw: ["React", "JavaScript", "CSS/HTML", "C#", "C#", "C#", "C#", "C#"],
+        status: "In Progress 🟡",
+        bw: ["React", "JavaScript", "HTML", "CSS"],
         link: "https://kt-codify.netlify.app/",
         linkText: "codify.netlify.app",
+    },
+    {
+        year: "2023",
+        project: "Edvin.",
+        status: "Completed 🟢",
+        bw: ["JavaScript", "HTML", "CSS"],
+        link: "https://edvindot.art/",
+        linkText: "edvindot.art",
     },
 ]
 

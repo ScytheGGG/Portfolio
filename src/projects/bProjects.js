@@ -19,6 +19,7 @@ export default function BProjects({ bpdata }) {
             <div className="bp--categories">
                 <p className="bpc--year">Year</p>
                 <p className="bpc--project">Project</p>
+                <p className="bpc--status">Status</p>
                 <p className="bpc--bw">Built with</p>
                 <p className="bpc--link">Link</p>
             </div>
@@ -27,6 +28,7 @@ export default function BProjects({ bpdata }) {
                     <div className="bp--project">
                         <p className="bpd--year">{bpd.year}</p>
                         <p className="bpd--project">{bpd.project}</p>
+                        <p className="bpd--status">{bpd.status}</p>
                         <div className="bpd--bw">
                             {bpd.bw.map((skill, skillIndex) => (
                                 <span key={skillIndex} className="bpdbw--box">

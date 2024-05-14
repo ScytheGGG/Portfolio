@@ -451,18 +451,17 @@ a {
       margin-left: 3%;
     }
 
+    .bpc--status {
+      margin-left: 12.5%;
+    }
+
     .bpc--bw {
-      margin-left: 20%;
+      margin-left: 10%;
     }
 
     .bpc--link {
-      margin-left: 40%;
+      margin-left: 37.5%;
     }
-  }
-
-  .bp--projects {
-    display: flex; /* Display children in a row */
-    flex-direction: column;
   }
 
   .bp--project {
@@ -477,29 +476,42 @@ a {
     }
 
     .bpd--project {
-      margin-left: 3%;
+      margin-left: 2.75%;
+      margin-right: -4.5%;
       flex: 1;
+      font-weight: bold;
+      font-size: 17px;
+    }
+
+    .bpd--status {
+      padding: 5px 10px; /* Adjust as needed */
+      margin-right: 5%;
+      border-radius: 50px;
+      font-size: 15px;
+      text-align: center;
+      color: var(--neon);
+      background-color: var(--dark-neon);
     }
 
     .bpd--bw {
-      margin-left: 8%;
-      flex: 2;
+      display: flex; /* Use flexbox to layout skills */
+      flex-wrap: wrap; /* Allow skills to wrap to the next line */
+      gap: 5px; /* Gap between skill boxes */
+      width: 40%;
+      margin-right: 5%;
     }
 
     .bpdbw--box {
       display: inline-block;
-      margin-top: 4%;
-      margin-right: 2%;
       padding: 5px 10px; /* Adjust as needed */
       border-radius: 50px;
       font-size: 15px;
       background-color: var(--dark-neon);
       color: var(--neon);
+      flex-shrink: 0;
     }
 
     .bpd--link {
-      margin-top: 1.25%;
-      margin-left: 25%;
       flex: 1;
       color: var(--grayish)
     }
