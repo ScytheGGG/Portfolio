@@ -414,20 +414,93 @@ a {
   margin-right: 7.5%;
   margin-left: 7.5%;
 
-  .bp--return {
-    margin-left: 2%;
-    font-size: 20px;
-    font-weight: bold;
+  /* HEADER */
+  .bp--header {
     color: var(--neon);
+    font-size: 20px;
+    transition: margin-left 0.2s;
   }
 
+  .bp--return {
+    margin-left: 0.5%;
+    font-weight: bold;
+  }
+
+  .bp--arrow {
+    transition: transform 0.2s ease;
+  }
+
+  .bp--header:hover .bp--arrow {
+    transform: translateX(-50.5%);
+  }
+
+  /* ALL THE OTHER STUFF */
   .bp--title {
     margin-top: -0%;
     font-size: 50px;
-    font-weight: bold;
+    font-weight: bolder;
   }
 
   .bp--categories {
+    margin-top: -1%;
     display: flex;
+    font-size: 17px;
+    font-weight: bold;
+
+    .bpc--project {
+      margin-left: 3%;
+    }
+
+    .bpc--bw {
+      margin-left: 20%;
+    }
+
+    .bpc--link {
+      margin-left: 40%;
+    }
+  }
+
+  .bp--projects {
+    display: flex; /* Display children in a row */
+    flex-direction: column;
+  }
+
+  .bp--project {
+    display: flex; /* Display children in a row */
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px 0;
+    border-top: 1px solid rgb(229, 231, 235, 0.1);
+
+    .bpd--year {
+      color: var(--grayish);
+    }
+
+    .bpd--project {
+      margin-left: 3%;
+      flex: 1;
+    }
+
+    .bpd--bw {
+      margin-left: 0.5%;
+      flex: 1;
+      display: inline-block;
+      padding: 5px 10px; /* Adjust as needed */
+      border-radius: 50px;
+      font-size: 15px;
+      background-color: var(--dark-neon);
+      color: var(--neon);
+    }
+
+    .bpd--link {
+      margin-top: 1.25%;
+      margin-left: 20%;
+      flex: 1;
+      color: var(--grayish)
+    }
+
+    .bpd--link:hover {
+      color: var(--neon); /* Change text color on hover */
+    }
   }
 }

@@ -7,6 +7,7 @@ import bPageProjectData from "./home/bPage-project-data"
 import MouseTrail from "./home/bPage-mouse"
 
 import BProjects from "./projects/bProjects"
+import bPinfo from "./projects/bProjects-data"
 
 // the app itself
 export default function App() {
@@ -18,7 +19,8 @@ export default function App() {
           <Route path="/" element={<BPage 
           entries={bPageExpData} 
           projects={bPageProjectData} />} />
-          <Route path="/projects" element={<BProjects />} />
+          <Route path="/projects" element={<BProjects 
+          bpdata={bPinfo}/>} />
         </Routes>
       </div>
     </Router>

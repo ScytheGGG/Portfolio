@@ -211,10 +211,10 @@ export default function BPage({ entries, projects }) {
                             </div>
                         </a>
                     ))}
-                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer" class="bprp--archive">
+                    <div className="bprp--archive">
                         <Link className="bprp--view" to="/projects">View Project Archive</Link>
                         <img className="bprp--arrow" src="./photos/arrows/arrow-right.png" alt="arrow right" width="12" height="9"></img>
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>
