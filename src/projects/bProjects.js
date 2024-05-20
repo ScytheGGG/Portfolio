@@ -36,9 +36,15 @@ export default function BProjects({ bpdata }) {
                                 </span>
                             ))}
                         </div>
-                        <a className="bpd--link" href={bpd.link} target="_blank" rel="noopener noreferrer">
-                            {bpd.linkText}
-                        </a>
+                        <div className="bpdl--box">
+                            <a className="bpd--link" href={bpd.link} target="_blank" rel="noopener noreferrer">
+                            <span className="link-text">{bpd.linkText}</span>
+                                <div className="bpd--img">
+                                    <img src="./photos/arrows/arrow-ne-gray.png" alt="New tab" className="bpd--img normal" width="10" height="10" />
+                                    <img src="./photos/arrows/arrow-ne-filtered.png" alt="New tab" className="bpd--img filtered" width="10" height="10" />
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 ))}
             </div>

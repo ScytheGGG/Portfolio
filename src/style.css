@@ -511,13 +511,58 @@ a {
       flex-shrink: 0;
     }
 
-    .bpd--link {
+    /* - - - - - - -- - - - - - - -*/
+    /* Website link hovering effect*/
+    .bpdl--box {
       flex: 1;
-      color: var(--grayish)
+      display: flex;
+      align-items: center;
+      font-size: 16px;
     }
-
+    
+    .bpd--link {
+      color: var(--grayish);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+    }
+    
     .bpd--link:hover {
-      color: var(--neon); /* Change text color on hover */
+      color: var(--neon);
     }
+    
+    .link-text {
+      margin-right: 5px; /* Adjust as needed for spacing between text and arrow */
+    }
+    
+    .bpd--img {
+      position: relative;
+      margin-top: -2px;
+    }
+    
+    .bpd--img img {
+      position: absolute;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    
+    .bpd--img img.normal {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+    
+    .bpd--img img.filtered {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+    
+    .bpd--link:hover .bpd--img img.normal {
+      opacity: 0;
+    }
+    
+    .bpd--link:hover .bpd--img img.filtered {
+      opacity: 1;
+      transform: translate(5px, -5px);
+    }
+    
   }
 }
