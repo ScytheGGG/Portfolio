@@ -176,6 +176,20 @@ a {
   color: var(--grayish);
   font-size: 18px;
   
+  .bpr--about {
+    font-size: 18.5px;
+    line-height: 1.35;
+  }
+
+  .bpa--text {
+    color: var(--white);
+    transition: transform 0.2s ease, filter 0.2s ease;
+  }
+
+  .bpa--text:hover {
+    color: var(--neon);
+  }
+
   /*- space between the sections */
   .bpr--experience {
     margin-top: 20%;

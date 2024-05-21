@@ -138,26 +138,25 @@ export default function BPage({ entries, projects }) {
             </div>
             <div className="bPage--right" style={rightStyle}>
                 <div className="bpr--about" id="bpr--about">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
-                    qui officia deserunt mollit anim id est laborum.</p>
+                    <p>From a young age, I was captivated by coding— it always seemed so intriguing. 
+                    In August 2022, I started my studies at <a href="https://www.keuda.fi/?lang=en" 
+                    target="_blank" rel="noreferrer" className="bpa--text">Keuda Vocational College</a>, 
+                    embarking on a journey in Software Development. Since then, I’ve immersed myself 
+                    in learning various programming languages and methodologies, including Scrum.</p>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
-                    qui officia deserunt mollit anim id est laborum.</p>
+                    <p>At school, I’ve gained proficiency in <a href="https://dotnet.microsoft.com/en-us/languages/csharp" target="_blank" rel="noreferrer" className="bpa--text">C#</a>,  
+                    <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" rel="noreferrer" className="bpa--text"> JavaScript</a>, and 
+                    <a href="https://www.mysql.com/" target="_blank" rel="noreferrer" className="bpa--text"> MySQL</a>. During my first internship at 
+                    <a href="https://www.tutors.fi/en" target="_blank" rel="noreferrer" className="bpa--text"> TUTORS Finland Oy</a>, it introduced me to front-end development using 
+                    <a href="https://react.dev/" target="_blank" rel="noreferrer" className="bpa--text"> React</a> and 
+                    <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer" className="bpa--text"> TypeScript</a>. 
+                    This hands-on experience solidified my passion for crafting seamless user 
+                    experiences and sparked my creativity.</p>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
-                    qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Currently, my focus is on developing user-friendly applications that are both 
+                    aesthetically pleasing and functionally robust. I love working on projects 
+                    where design and engineering intersect. Outside of coding, I enjoy going to 
+                    the gym, spending quality time with friends and family, and playing video games.</p>
                 </div>
                 <div className="bpr--experience" id="bpr--experience">
                     {entries.map((entry, index) => (
