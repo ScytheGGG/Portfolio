@@ -116,7 +116,7 @@ export default function BPage({ entries, projects }) {
                     </p>
                 </div>
                 <div className="bpl--images">
-                    <a href="https://github.com/kthoid" target="_blank" rel="noreferrer">
+                    <a href="https://github.com/ScytheGGG" target="_blank" rel="noreferrer">
                         <div className="github--logo">
                             <img className="filtered github--filtered" src="./photos/github-logo-filtered.png" alt="Github Filtered" width="24" height="23" />
                             <img className="normal github--normal" src="./photos/github-logo.png" alt="Github Normal" width="24" height="23" />
