@@ -183,7 +183,7 @@ export default function BPage({ entries, projects }) {
                             </div>
                         </a>
                     ))}
-                    <a href="./KT-Resume.pdf#zoom=150" target="_blank" rel="noreferrer" class="bpre--archive">
+                    <a href="./KT-Resume.pdf#zoom=175" target="_blank" rel="noreferrer" class="bpre--archive">
                         <div class="bpre--view">View Resume</div>
                         <div class="brpe--img logo">
                             <img src="./photos/arrows/arrow-ne.png" alt="New tab" class="brpe--img normal" width="10" height="10"></img>
