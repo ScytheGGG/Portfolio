@@ -10,7 +10,7 @@ const bPageProjectData = [
         website: "https://kt-codify.netlify.app/",
         image: "./photos/projects/codify-picture.png",
         title: "Codify",
-        details: "React-based project designed to infuse creativity into coding sessions. With its unique blend of NCS music and innovative features, Codify is your go-to Spotify clone.",
+        details: "Spotify clone, which has a unique blend of NCS music and innovative features.",
         status: "In Progress 🟡",
     },
 ]

@@ -20,7 +20,7 @@ export default function BPage({ entries, projects }) {
         const projectsOffset = projectsSection.offsetTop;
 
         // Get the current scroll position
-        const scrollPosition = window.scrollY;
+        const scrollPosition = window.scrollY + 175;
 
         // Determine the active section based on scroll position
         if (scrollPosition >= aboutOffset && scrollPosition < experienceOffset) {
@@ -49,7 +49,7 @@ export default function BPage({ entries, projects }) {
             const element = document.querySelector(`.bpr--${section}`);
             if (element) {
                 const viewportHeight = window.innerHeight;
-                const yOffsetPercentage = 0.1; // Adjust this value to set the percentage of viewport height as the offset
+                const yOffsetPercentage = 0.5; // Adjust this value to set the percentage of viewport height as the offset
                 const yOffset = -viewportHeight * yOffsetPercentage;
                 const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
                 window.scrollTo({ top: y, behavior: 'smooth' });
@@ -183,7 +183,7 @@ export default function BPage({ entries, projects }) {
                             </div>
                         </a>
                     ))}
-                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer" class="bpre--archive">
+                    <a href="./KT-Resume.pdf#zoom=150" target="_blank" rel="noreferrer" class="bpre--archive">
                         <div class="bpre--view">View Resume</div>
                         <div class="brpe--img logo">
                             <img src="./photos/arrows/arrow-ne.png" alt="New tab" class="brpe--img normal" width="10" height="10"></img>

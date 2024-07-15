@@ -1,12 +1,5 @@
 const bPageExpData = [
     {
-        website: "",
-        date: "AUGUST - OCT 2024", 
-        title: "Developer Intern · ?",
-        details: "Still looking for a place.",
-        skills: ["React", "JavaScript", "CSS/HTML", "C#"],
-    },
-    {
         website: "https://www.tutors.fi/en",
         date: "JAN - MARCH 2024", 
         title: "Developer Intern · Tutors",
