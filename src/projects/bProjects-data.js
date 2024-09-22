@@ -1,6 +1,14 @@
 const bPinfo = [
     {
         year: "2024",
+        project: "Urban Kicks",
+        status: "In Progress 🟡",
+        bw: ["React", "JavaScript", "HTML", "CSS"],
+        link: "",
+        linkText: "urbankicks.netlify.app",
+    }, 
+    {
+        year: "2024",
         project: "Buy My Data",
         status: "In Progress 🟡",
         bw: ["React", "JavaScript", "HTML", "CSS"],
